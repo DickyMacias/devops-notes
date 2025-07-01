@@ -46,13 +46,15 @@
       // Configuración básica
       homepage: 'README.md',
       
-      // Mantener un único sidebar
+      // Mantener un único sidebar y gestionar mejor las rutas
       alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
+        '/.*/_sidebar.md': '/_sidebar.md',
+        '/(.*)/(.*).md': '/$1/$2.md', // Manejar correctamente las rutas anidadas
+        '/.*/README.md': '/README.md' // Evitar duplicaciones en carpetas con README
       },
       
-      // Para navegación más amigable
-      relativePath: true,
+      // Desactivamos relativePath para evitar problemas de rutas duplicadas
+      relativePath: false,
       
       // Configuración para sidebar colapsable
       sidebarDisplayLevel: 1, // Establece el nivel que se muestra por defecto (1 significa que solo el primer nivel estará expandido)

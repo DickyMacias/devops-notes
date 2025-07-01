@@ -3,4 +3,4 @@
 Guías y comandos útiles para trabajar con GitHub.
 
 **Contenidos:**
-- [Crear Repositorio desde Terminal](crear-repositorio-desde-terminal)
+- [Crear Repositorio desde Terminal](/github/crear-repositorio-desde-terminal)
