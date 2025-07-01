@@ -6,6 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    /* Estilos personalizados para el sidebar colapsable */
+    .sidebar-nav li > a {
+      position: relative;
+    }
+    
+    .sidebar-nav li.folder > a:before {
+      content: '';
+      padding-right: 5px;
+    }
+    
+    .sidebar-nav li.active > a {
+      color: var(--theme-color, #42b983);
+      font-weight: 600;
+    }
+    
+    /* Mejora en la apariencia de las flechas de colapso */
+    .sidebar-nav .folder:before {
+      transition: transform .25s;
+    }
+    
+    /* Espaciado para los subniveles */
+    .sidebar-nav > ul > li > ul {
+      margin-left: 10px;
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>
@@ -26,7 +52,12 @@
       },
       
       // Para navegación más amigable
-      relativePath: true
+      relativePath: true,
+      
+      // Configuración para sidebar colapsable
+      sidebarDisplayLevel: 1, // Establece el nivel que se muestra por defecto (1 significa que solo el primer nivel estará expandido)
+      // Plugin de colapso mostrará flechas para expandir/colapsar
+      collapseList: true
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
@@ -34,5 +65,9 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  
+  <!-- Plugin para sidebar colapsable -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
 </body>
 </html>
