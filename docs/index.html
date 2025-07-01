@@ -6,34 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <style>
-    /* Mejorar estilo del sidebar */
-    .sidebar {
-      padding: 20px 0;
-    }
-    .sidebar > h1 {
-      margin-left: 15px;
-    }
-    .sidebar ul li {
-      margin: 0;
-      position: relative;
-    }
-    .sidebar ul li.active > a {
-      color: var(--theme-color, #42b983);
-      font-weight: 600;
-    }
-    .sidebar ul li a {
-      padding: 8px 15px;
-      display: block;
-    }
-    /* Mejorar la visualización del contenido principal */
-    .content {
-      padding-top: 20px;
-    }
-    .markdown-section {
-      max-width: 90%;
-    }
-  </style>
 </head>
 <body>
   <div id="app"></div>
@@ -42,39 +14,19 @@
       name: 'Notas de DevOps',
       repo: 'https://github.com/DickyMacias/devops-notes',
       loadSidebar: true,
-      subMaxLevel: 2,
+      subMaxLevel: 3,
       auto2top: true,
+      
+      // Configuración básica
       homepage: 'README.md',
-      
-      // Siempre muestra el sidebar
-      hideSidebar: false,
-      
-      // Eliminar configuraciones conflictivas
-      basePath: '',
       
       // Mantener un único sidebar
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
       
-      // Manejo consistente de extensiones
-      ext: '',
-      
-      // Para páginas no encontradas:
-      notFoundPage: true,
-      
-      // Manejo de rutas más robusto
-      routerMode: 'hash',
-      
-      // Mejorar la navegación
-      nameLink: '/',
-      mergeNavbar: true,
-      
-      // Evitar errores con enlaces relativos
-      relativePath: false,
-      
-      // Ejecutar scripts en las páginas markdown
-      executeScript: false
+      // Para navegación más amigable
+      relativePath: true
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
