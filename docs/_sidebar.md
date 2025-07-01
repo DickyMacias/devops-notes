@@ -1,3 +1,3 @@
 - [📝 Inicio](/)
-- [GitHub](github/)
-  - [Crear Repositorio en GitHub](/crear-repositorio-desde-terminal)
+- [GitHub](/github/)
+  - [Crear Repositorio en GitHub](/github/crear-repositorio-desde-terminal)
