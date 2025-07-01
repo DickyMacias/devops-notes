@@ -1,4 +1,3 @@
-- [Inicio](/)
-- [Guía de Usuario](readme.md)
-- Notas de DevOps
+- [📝 Inicio](/)
+- [GitHub](github/)
   - [Crear Repositorio en GitHub](github/crear-repositorio-desde-terminal.md)
