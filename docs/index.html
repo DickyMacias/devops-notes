@@ -13,24 +13,29 @@
     window.$docsify = {
       name: 'Notas de DevOps',
       repo: 'https://github.com/DickyMacias/devops-notes',
-      loadSidebar: true,        // Asegúrate de que esto esté habilitado
-      subMaxLevel: 2,           // Nivel de subcabeceras en la barra lateral
-      auto2top: true,           // Scroll al inicio al cambiar de página
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
       
-      // Configuración clave para GitHub Pages:
-      basePath: '/devops-notes/docs/',  // Ruta base a tus documentos
+      // Configuración optimizada para GitHub Pages:
+      nameLink: '/devops-notes/',
       
-      // Para subdirectorios:
+      // No necesitamos basePath si los archivos están directamente en /docs
+      // y GitHub Pages apunta a /docs
+      
+      // Para manejar un único sidebar:
       alias: {
-        '/.*/_sidebar.md': '/_sidebar.md', // Usar un único sidebar
+        '/.*/_sidebar.md': '/_sidebar.md',
       },
       
-      // Manejo de rutas 404:
+      // Para navegación más amigable:
+      relativePath: true,
+      
+      // Para páginas no encontradas:
       notFoundPage: true,
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <!-- Plugins recomendados -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
